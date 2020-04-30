@@ -1,0 +1,145 @@
+#define SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <string.h>
+#include <malloc.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <windows.h>
+
+const int maxtablesize = 4;
+
+typedef struct data {
+	int key1;
+	int key2;
+	char *string;
+} data;
+
+typedef struct table {
+	int tablesize;
+	data *info;
+} table;
+
+void initTab(table*);
+int* getInt(int*);
+int enterdata(table*, int);
+void printtable(table*, int);
+int insertelem(table*, int, data*);
+int poiskpovtora(table *, int, int *);
+
+int main()
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	setlocale(LC_ALL, "Rus");
+	table table = { 0, (data *)calloc(maxtablesize, sizeof(data)) };
+	int tablesize = 0; int n = 0;
+	while (n++<maxtablesize) tablesize=enterdata(&table,tablesize);
+	printtable(&table, tablesize);
+	return 0;
+}
+
+int* getInt(int *adr)
+{
+	int n;
+	do
+	{
+		n = scanf_s("%d", adr, 4);
+		if (n == 0)
+		{
+			printf_s("Ошибка. Повторите ввод \n");
+			scanf_s("%*[^\n]");
+		}
+	} while (n == 0);
+	scanf_s("%*c");
+	return adr;
+}
+
+char *getstr()
+{
+	char *ptr = (char *)calloc(1, sizeof(char *));
+	char buf[81];
+	int n;
+	int len = 0;
+	*ptr = '\0';
+	do {
+		n = scanf("%80[^\n]", buf); //n = scanf_s("%80[^\n]", buf); 
+		if (n < 0) { // когда считан конец строки или файла
+			free(ptr); // освобождаем память
+			ptr = NULL;
+			continue;
+		}
+		if (n == 0)
+			scanf_s("%*c");
+		else {
+			len += strlen(buf);
+			ptr = (char *)realloc(ptr, len + 1); // память ещё и для пробела
+			strcat(ptr, buf); //из буферного в строку птр
+		}
+	} while (n > 0);
+	return ptr;
+}
+
+int enterdata(table* ukaz, int size) {
+	int k; int*p; int i = 0; data *ptr = (ukaz->info)+size; char *pchar = NULL;
+	if (size <= maxtablesize) {
+		do {
+			size = insertelem(ukaz, size, ptr);
+		} while (!size);
+	}
+	else printf_s("Таблица переполнена");
+	return size;
+}
+
+int insertelem(table *ukaz, int size, data* ptr) {
+	 char* pchar; int *p; int k;
+	printf_s("Введите ключ первого пространства\n");
+	p = getInt(&k);
+	if (poiskpovtora(ukaz, size, p)) {
+		printf_s("Ошибка. Заданный ключ уже есть. Повторите попытку\n"); *p = 0; return 0;
+	}
+	else
+	{
+		ptr->key1 = *p;
+		printf_s("Введите ключ второго пространства\n");
+		p = getInt(&k);
+		if (poiskpovtora(ukaz, size, p)) {
+			printf_s("Ошибка. Заданный ключ уже есть. Повторите попытку\n"); return 0;
+		}
+		else {
+			ptr->key2 = *p;
+			printf_s("Введите данные\n");
+			scanf_s("%*c");
+			pchar = getstr();
+			ptr->string = pchar;
+			size++;
+			ptr++;
+		}
+	}
+	return size;
+}
+
+void printtable(table *ukaz, int size) {
+	int i = 0;
+	data *ptr = ukaz->info;
+	while (i<size) {
+		printf_s("№%d, ключ 1: %d, ключ 2: %d, данные: \"%s\"\n", i, ptr->key1, ptr->key2, ptr->string);
+		i++;
+		ptr++;
+	}
+}
+
+int poiskpovtora(table *ukaz, int size, int *key) {
+	 int i=0; data* ptr = ukaz->info;
+	if (!size) {
+		if ((ptr->key2 == *key) || (ptr->key1 == *key)) return 1;
+		else
+			return 0;
+	}
+	
+	else {
+		for (i = 0; i < size; i++, ptr++) {
+			if ((ptr->key1 == *key) || (ptr->key2 == *key)) return 1;
+		}
+	}  
+	return 0;
+}

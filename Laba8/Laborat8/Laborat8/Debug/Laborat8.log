@@ -1,0 +1,5 @@
+﻿  Labych8.cpp
+c:\users\hp\desktop\проги 2 семестр\laba8\laborat8\laborat8\labych8.cpp(103): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+c:\users\hp\desktop\проги 2 семестр\laba8\laborat8\laborat8\labych8.cpp(491): warning C4101: i: неиспользованная локальная переменная
+  Laborat8.vcxproj -> C:\Users\HP\Desktop\Проги 2 семестр\Laba8\Laborat8\Debug\Laborat8.exe
+  Laborat8.vcxproj -> C:\Users\HP\Desktop\Проги 2 семестр\Laba8\Laborat8\Debug\Laborat8.pdb (Partial PDB)

@@ -1,0 +1,10 @@
+﻿  Laboratorka7BTree.cpp
+Laboratorka7BTree.cpp(583): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+Laboratorka7BTree.cpp(648): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+Laboratorka7BTree.cpp(642): warning C4101: rc: неиспользованная локальная переменная
+  Создание кода
+  2 of 38 functions ( 5.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Создание кода завершено
+  Laba7TreeB.vcxproj -> C:\Users\HP\Desktop\Проги 2 семестр\Laba7\Laba7TreeB\Release\Laba7TreeB.exe

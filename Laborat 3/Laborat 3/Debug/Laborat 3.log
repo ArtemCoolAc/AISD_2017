@@ -1,0 +1,13 @@
+﻿  Laboratorka s kommentami.cpp
+c:\users\hp\desktop\проги 2 семестр\laborat 3\laborat 3\laboratorka s kommentami.cpp(2): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+c:\users\hp\desktop\проги 2 семестр\laborat 3\laborat 3\laboratorka s kommentami.cpp(3): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+c:\users\hp\desktop\проги 2 семестр\laborat 3\laborat 3\laboratorka s kommentami.cpp(4): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+c:\users\hp\desktop\проги 2 семестр\laborat 3\laborat 3\laboratorka s kommentami.cpp(5): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+c:\users\hp\desktop\проги 2 семестр\laborat 3\laborat 3\laboratorka s kommentami.cpp(6): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+c:\users\hp\desktop\проги 2 семестр\laborat 3\laborat 3\laboratorka s kommentami.cpp(20): warning C4101: add: неиспользованная локальная переменная
+c:\users\hp\desktop\проги 2 семестр\laborat 3\laborat 3\laboratorka s kommentami.cpp(44): warning C4474: "scanf_s" : для строки формата передано слишком много аргументов
+  c:\users\hp\desktop\проги 2 семестр\laborat 3\laborat 3\laboratorka s kommentami.cpp(44): note: заполнители и их параметры ожидают переменное число аргументов в количестве 1, но было предоставлено 2
+c:\users\hp\desktop\проги 2 семестр\laborat 3\laborat 3\laboratorka s kommentami.cpp(83): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\string.h(530): note:  см. объявление "strdup"
+  Laborat 3.vcxproj -> C:\Users\HP\Desktop\Проги 2 семестр\Laborat 3\Debug\Laborat 3.exe
+  Laborat 3.vcxproj -> C:\Users\HP\Desktop\Проги 2 семестр\Laborat 3\Debug\Laborat 3.pdb (Partial PDB)

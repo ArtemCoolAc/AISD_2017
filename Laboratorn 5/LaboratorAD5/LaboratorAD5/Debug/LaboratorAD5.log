@@ -1,0 +1,10 @@
+﻿  LaboratSuccess5.cpp
+c:\users\hp\desktop\проги 2 семестр\laboratorn 5\laboratorad5\laboratorad5\laboratsuccess5.cpp(70): warning C4474: "scanf_s" : для строки формата передано слишком много аргументов
+  c:\users\hp\desktop\проги 2 семестр\laboratorn 5\laboratorad5\laboratorad5\laboratsuccess5.cpp(70): note: заполнители и их параметры ожидают переменное число аргументов в количестве 1, но было предоставлено 2
+c:\users\hp\desktop\проги 2 семестр\laboratorn 5\laboratorad5\laboratorad5\laboratsuccess5.cpp(86): warning C4474: "scanf_s" : для строки формата передано слишком много аргументов
+  c:\users\hp\desktop\проги 2 семестр\laboratorn 5\laboratorad5\laboratorad5\laboratsuccess5.cpp(86): note: заполнители и их параметры ожидают переменное число аргументов в количестве 1, но было предоставлено 2
+c:\users\hp\desktop\проги 2 семестр\laboratorn 5\laboratorad5\laboratorad5\laboratsuccess5.cpp(196): warning C4477: "printf_s": в строке форматирования "%s" требуется аргумент типа "char *", но вариативный аргумент "4" имеет тип "int"
+c:\users\hp\desktop\проги 2 семестр\laboratorn 5\laboratorad5\laboratorad5\laboratsuccess5.cpp(239): warning C4700: использована неинициализированная локальная переменная "index"
+c:\users\hp\desktop\проги 2 семестр\laboratorn 5\laboratorad5\laboratorad5\laboratsuccess5.cpp(239): warning C4700: использована неинициализированная локальная переменная "index1"
+LaboratSuccess5.obj : error LNK2019: ссылка на неразрешенный внешний символ "int __cdecl udalelem(struct Table *,int *)" (?udalelem@@YAHPAUTable@@PAH@Z) в функции "int __cdecl deleteelem(struct Table *)" (?deleteelem@@YAHPAUTable@@@Z)
+C:\Users\HP\Desktop\Проги 2 семестр\Laboratorn 5\LaboratorAD5\Debug\LaboratorAD5.exe : fatal error LNK1120: неразрешенных внешних элементов: 1
